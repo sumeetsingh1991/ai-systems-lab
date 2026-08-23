@@ -1,0 +1,27 @@
+[project]
+name = "ai-systems-lab"
+version = "0.1.0"
+description = "A lab for production AI systems: RAG, agents, MCP, and inference"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "mypy>=1.10",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["applications", "rag", "agents", "mcp", "inference", "projects"]
